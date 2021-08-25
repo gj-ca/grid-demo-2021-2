@@ -1,0 +1,49 @@
+body {
+  display: grid;
+  grid-template-areas: "header header header" "sidebar main main" "footer footer footer";
+  grid-template-columns: repeat(3, 1fr); }
+
+#topbar {
+  grid-area: header;
+  display: flex;
+  background-color: black; }
+  #topbar nav {
+    width: 100%;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly; }
+    #topbar nav a {
+      color: white; }
+
+#sidebar {
+  background-color: purple;
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+  #sidebar a {
+    color: white;
+    background-color: black;
+    padding: 10px; }
+
+footer {
+  background-color: salmon;
+  grid-area: footer; }
+  footer a:nth-child(1) {
+    background-color: black;
+    grid-area: header; }
+
+main {
+  background-color: seagreen;
+  grid-area: main; }
+  main section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 15px;
+    margin: 10px 0; }
+    main section article {
+      outline: solid 1px black;
+      flex-basis: 200px; }
+
+/*# sourceMappingURL=style.css.map */
